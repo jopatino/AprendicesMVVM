@@ -8,7 +8,10 @@ namespace AprendicesMVVM.ViewModel
     using System.Text;
     using System.Threading.Tasks;
     using AprendicesMVVM.Model;
+    using DemoMVVMAprendices.Model;
     using Model.Services;
+    using Xamarin.Forms;
+
     public class AprendizViewModel:Notificable
     {
         private ObservableCollection<Aprendiz> aprendices;
@@ -25,6 +28,9 @@ namespace AprendicesMVVM.ViewModel
                 OnPropertyChanged();
             }
         }
+
+        public Command CargarAprendizCommand { get; set; }
+
         private bool isEnabled;
 
         public bool IsEnabled

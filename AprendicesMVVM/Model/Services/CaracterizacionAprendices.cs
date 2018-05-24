@@ -10,7 +10,7 @@ namespace AprendicesMVVM.Model.Services
         public static  Data CargarAprendices()
         {
             ObservableCollection<Aprendiz> aprendices = new ObservableCollection<Aprendiz>();
-            Data carAprendices = new.Data();
+            Data carAprendices = new Data();
 
             string[] nombres = {"Oscar", "Elkin", "Francisco", "Victor Manuel", "Alejandro", "Diana",
                                 "Oliverio", "Mauricio", "Jesús"};
@@ -22,10 +22,10 @@ namespace AprendicesMVVM.Model.Services
 
             for(int i = 0; i < 20; i++)
             {
-                Aprendiz.aprendiz = new Aprendiz();
+                Aprendiz aprendiz = new Aprendiz();
                 aprendiz.Nombre = nombres[rdn.Next(0, 8)];
                 aprendiz.Apellido = $"{apellidos[rdn.Next(0, 4)]} {apellidos[rdn.Next(0, 4)]}";
-                double ficha = rdn.Nexr(1618618, 2000000);
+                double ficha = rdn.Next(1618618, 2000000);
                 aprendiz.Ficha = ficha;
                 aprendiz.Programa = programas[rdn.Next(0, 4)];
                 aprendiz.Promedio = rdn.Next(100, 1000);
