@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AprendicesMVVM.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace AprendicesMVVM
 		{
 			InitializeComponent();
 
-			MainPage = new AprendicesMVVM.MainPage();
+            MainPage = new NavigationPage(new AprendizPage());
 		}
 
 		protected override void OnStart ()
